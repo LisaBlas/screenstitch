@@ -47,3 +47,10 @@ tests/
 
 ## Current Phase
 Phase 1: Core Pipeline (Local CLI) — see `build-plan.md` for detailed step tracking.
+
+## Deploy facts
+- Remote: `git@github.com:LisaBlas/screenstitch.git` (SSH).
+- Push policy: push only when explicitly requested by the user.
+- Deploy command: not established.
+- Restart command: not established.
+- Preview URL: not established.
