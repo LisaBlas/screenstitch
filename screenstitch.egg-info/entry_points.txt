@@ -1,0 +1,2 @@
+[console_scripts]
+screenstitch = screenstitch.cli:main
