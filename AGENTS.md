@@ -1,54 +1,38 @@
 # ScreenStitch — Project Context
 
-## What This Is
-A web app that stitches overlapping gameplay screenshots into a single seamless, UI-free panorama. Uses only real captured pixels — no AI generation/inpainting. Target audience: gamers showcasing builds (hideouts, bases, housing) on Reddit/social media or for print.
+## Purpose
 
-## Tech Stack
-- **Language:** Python 3.10+
-- **Core libs:** OpenCV (`opencv-python`), NumPy, Pillow
-- **API (Phase 2):** FastAPI with background task processing
-- **Frontend (Phase 3):** Vanilla HTML/JS served by FastAPI, dark-themed
-- **Deployment target:** DigitalOcean VPS, Docker, Nginx + SSL
+Combine overlapping gameplay screenshots into a continuous, HUD-free panorama using the built-in image-generation tool. The user accepted the first PoE2 hideout result and selected this direct method for further work.
 
-## Project Structure
-```
-screenstitch/
-  __init__.py
-  cli.py                  # CLI entry point: python -m screenstitch
-  utils.py                # I/O helpers (image loading, saving, path handling)
-  pipeline/
-    __init__.py
-    register.py           # Feature matching (ORB) + homography → warp to shared space
-    mask.py               # Disagreement-based HUD/UI detection via overlap comparison
-    reconstruct.py        # Composite clean (world-only) pixels into single image
-    blend.py              # Multi-band / Poisson blending for seamless seams
-tests/
-  __init__.py
-  fixtures/               # Sample screenshot sets for testing
-```
+## Current workflow
 
-## Pipeline Architecture (4 stages, sequential)
-1. **Registration** — ORB feature detection → BFMatcher/FLANN → `cv2.findHomography` (RANSAC) → warp all images into shared canvas. Fallback: `cv2.Stitcher_create()`.
-2. **Disagreement Masking** — For each pixel with 2+ contributors: compute median color, flag outliers (`|pixel - median| > threshold`). Outliers = HUD/cursor/particles. Clean up with morphological ops (dilate/erode). Tunables: `t` (difference threshold), `p` (inlier fraction).
-3. **Reconstruction** — Composite using only unmasked (world) pixels. Where multiple clean sources overlap, use median value.
-4. **Blending** — Laplacian pyramid multi-band blending for exposure matching. Feathered alpha at seam boundaries. Optional Poisson blending for stubborn seams.
+- Read `docs/WORKFLOW.md` before generating a composite.
+- Inspect all source images before prompting. Identify shared landmarks and describe the spatial relationship between the views.
+- Use the imagegen skill and built-in image tool. No local Python pipeline, application server or dependencies are required.
+- Preserve scene layout and important details; remove HUD and handle moving characters explicitly.
+- Generation may alter details. Do not describe results as pixel-exact or geometrically verified without evidence.
 
-## Key Design Decisions
-- **ORB over SIFT/SURF** — Free, no patent issues, fast enough for this use case.
-- **Disagreement masking over template matching** — Game-agnostic. No need for per-game HUD templates. Works by comparing what's consistent across overlapping frames.
-- **No AI inpainting** — Core promise is "only real captured pixels." Gaps from HUD removal stay as gaps unless covered by another screenshot.
-- **CLI first, web second** — Prove the pipeline works before building API/UI. All value is in the stitching quality.
+## Files
+
+- `README.md`: overview and accepted example.
+- `poe2/`: the two original hideout screenshots, in the order recorded in the manifest.
+- `output/imagegen/poe2-hideout-v1.png`: accepted first result.
+- `output/imagegen/poe2-hideout-v1.md`: exact prompt and review.
+- `output/imagegen/poe2-hideout-v1.json`: tool arguments, input order and checksums.
+- `docs/WORKFLOW.md`: repeatable procedure and review criteria.
+- `docs/RECENT_CHANGES.md`: recent repository changes.
 
 ## Conventions
-- Entry point: `python -m screenstitch ./screenshots/ -o output.png`
-- Debug mode: `--debug-dir ./debug/` saves intermediates (keypoints, matches, warps, masks, seam maps)
-- Pipeline functions should be independently testable — each stage takes explicit inputs and returns explicit outputs (no global state)
-- Prefer NumPy array operations over Python loops for performance
 
-## Current Phase
-Phase 1: Core Pipeline (Local CLI) — see `build-plan.md` for detailed step tracking.
+- Preserve source screenshots and accepted outputs. Save iterations under new versioned filenames.
+- Save each result with its exact prompt, ordered input paths, tool settings and review.
+- Copy project outputs from the tool's generated-image directory into this repository.
+- Tool-selected models and nondeterministic generation prevent a promise of identical reruns.
+- The old OpenCV implementation and sample tests are recoverable from Git history at `82b38a6`; they are no longer the active method.
+- `AGENTS.md` is canonical. `CLAUDE.md` must remain a relative symlink to it.
 
 ## Deploy facts
+
 - Remote: `git@github.com:LisaBlas/screenstitch.git` (SSH).
 - Push policy: push only when explicitly requested by the user.
 - Deploy command: not established.

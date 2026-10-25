@@ -1,20 +1,10 @@
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.venv/
-venv/
-build/
-dist/
-
-# Generated output
-debug/
-test_output/
-test_output*/
-output*.png
-
 # Local / OS artifacts
-nul
-.claude/settings.local.json
 .DS_Store
 Thumbs.db
+nul
+.claude/settings.local.json
+
+# Local credentials
+.env
+.env.*
+!.env.example

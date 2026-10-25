@@ -2,7 +2,13 @@
 
 Generated with the built-in image_gen tool from the two screenshots in `poe2/`.
 
+## Reproduction
+
+The [run manifest](poe2-hideout-v1.json) preserves the exact prompt, ordered input paths, tool settings and SHA-256 checksums. See [the workflow](../../docs/WORKFLOW.md) for the procedure.
+
 ## Review
+
+The user accepted this result as successful.
 
 Visual inspection: one continuous scene with the shared banana stall, portal, statue and dock; HUD removed. Some paving and decoration details are changed. This is a generated composite, not a verified geometrically accurate stitch. No automated fidelity measurement was run.
 
