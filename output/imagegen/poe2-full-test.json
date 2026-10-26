@@ -1,0 +1,171 @@
+{
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "model": "Tool-selected; exact version not exposed",
+  "source_revision": "b0b0ca9",
+  "original_inputs": [
+    "poe2/Capture d'écran 2026-10-26 004136.png",
+    "poe2/Capture d'écran 2026-10-26 004144.png",
+    "poe2/Capture d'écran 2026-10-26 004153.png",
+    "poe2/Capture d'écran 2026-10-26 004203.png",
+    "poe2/Capture d'écran 2026-10-26 004209.png",
+    "poe2/Capture d'écran 2026-10-26 004217.png",
+    "poe2/Capture d'écran 2026-10-26 004226.png",
+    "poe2/Capture d'écran 2026-10-26 004231.png",
+    "poe2/Capture d'écran 2026-10-26 004241.png",
+    "poe2/Capture d'écran 2026-10-26 004250.png",
+    "poe2/Capture d'écran 2026-10-26 004257.png",
+    "poe2/Capture d'écran 2026-10-26 004303.png",
+    "poe2/Capture d'écran 2026-10-26 004308.png",
+    "poe2/Capture d'écran 2026-10-26 004312.png",
+    "poe2/Capture d'écran 2026-10-26 004317.png",
+    "poe2/Capture d'écran 2026-10-26 004323.png"
+  ],
+  "path_note": "Resolve relative input paths against repository root.",
+  "reproducibility": "Nondeterministic. Prompts and inputs preserve the procedure, not identical pixels.",
+  "initial_attempt": {
+    "status": "Rejected before generation",
+    "reason": "referenced_image_paths must contain at most 5 paths",
+    "prompt_file": "output/imagegen/poe2-full-hideout-v1.prompt.txt"
+  },
+  "runs": [
+    {
+      "id": "east",
+      "arguments": {
+        "referenced_image_paths": [
+          "poe2/Capture d'écran 2026-10-26 004136.png",
+          "poe2/Capture d'écran 2026-10-26 004144.png",
+          "poe2/Capture d'écran 2026-10-26 004153.png",
+          "poe2/Capture d'écran 2026-10-26 004203.png",
+          "poe2/Capture d'écran 2026-10-26 004217.png"
+        ],
+        "prompt": "Use case: compositing. Stitch all five supplied screenshots of the SAME Path of Exile 2 hideout into ONE continuous wide panorama of this section. These are overlapping views, not separate scenes. Preserve isometric orientation, exact relative layout, buildings, decoration, scale, game textures, lighting and vegetation. Use matching static landmarks to align overlaps; shared structures appear only ONCE. Eastern market, temple and dock. Input 1 is the red multi-turret temple courtyard with orange pedestal, market above-left and dock above-right. Input 2 is the dock entrance with blue-purple waypoint and large red seated statue to its left. Input 3 extends the SAME dock to its far tip with guards, sacks and tall side barrier. Input 4 is the northern market grove with red-flowered tree, fish rack, cages and feather-headdress NPC; same statue and waypoint below-right. Input 5 is central market with hanging rugs/chest at left, food/banana stalls at right, workbench below. Match stalls to upper-left of input 1 and bottom of input 4. Preserve the ENTIRE dock including guard formation and tip at far right; temple below its landward entrance, market left, grove above. Remove all HUD, minimap, text, Windows activation overlay, cursor, overhead bars and the moving gold/orange player at each screenshot center with its purple selection ring. Retain stationary NPCs and decorative guards in their correct positions, including intentional groups of identical guards. No new buildings, no beautification/redesign, no rearrangement, no collage panels, no labels. Include the union of visible scene content, not just common overlap; use source evidence for hidden areas and minimal fill for small gaps. Highest detail and largest practical output. Output only the continuous scene.",
+        "transparent_background": false
+      },
+      "output": "output/imagegen/poe2-full-east-v1.png",
+      "output_dimensions": [
+        1942,
+        809
+      ]
+    },
+    {
+      "id": "north",
+      "arguments": {
+        "referenced_image_paths": [
+          "poe2/Capture d'écran 2026-10-26 004203.png",
+          "poe2/Capture d'écran 2026-10-26 004209.png",
+          "poe2/Capture d'écran 2026-10-26 004217.png",
+          "poe2/Capture d'écran 2026-10-26 004250.png",
+          "poe2/Capture d'écran 2026-10-26 004257.png"
+        ],
+        "prompt": "Use case: compositing. Stitch all five supplied screenshots of the SAME Path of Exile 2 hideout into ONE continuous wide panorama of this section. These are overlapping views, not separate scenes. Preserve isometric orientation, exact relative layout, buildings, decoration, scale, game textures, lighting and vegetation. Use matching static landmarks to align overlaps; shared structures appear only ONCE. Northern market and western connecting cliff path. Input 1 northern red-flowered tree grove, fish drying rack, cages, feather-headdress NPC, red seated statue and blue waypoint below-right. Input 2 cyan circular well above-left of SAME grove/tree/cages. Input 3 market immediately below grove with hanging rugs/chest at left, banana/food stalls at right and workbench below. Input 4 continues LEFT from market's hanging rugs along a cliff draped with three red/gold cloth shades; same cages appear above-right. Input 5 continues LEFT again past the shades to a small storage lean-to with crates/barrels, flowering tree at left and thatched hut below. Layout left-to-right: lean-to/hut, cliff shade path, well/grove/market, statue/waypoint. Keep these regions extended horizontally, with central vegetation and connecting paths, rather than compressing them into one square. Remove all HUD, minimap, text, Windows activation overlay, cursor, overhead bars and the moving gold/orange player at each screenshot center with its purple selection ring. Retain stationary NPCs and decorative guards in their correct positions, including intentional groups of identical guards. No new buildings, no beautification/redesign, no rearrangement, no collage panels, no labels. Include the union of visible scene content, not just common overlap; use source evidence for hidden areas and minimal fill for small gaps. Highest detail and largest practical output. Output only the continuous scene.",
+        "transparent_background": false
+      },
+      "output": "output/imagegen/poe2-full-north-v1.png",
+      "output_dimensions": [
+        2112,
+        744
+      ]
+    },
+    {
+      "id": "west",
+      "arguments": {
+        "referenced_image_paths": [
+          "poe2/Capture d'écran 2026-10-26 004226.png",
+          "poe2/Capture d'écran 2026-10-26 004231.png",
+          "poe2/Capture d'écran 2026-10-26 004241.png",
+          "poe2/Capture d'écran 2026-10-26 004257.png",
+          "poe2/Capture d'écran 2026-10-26 004303.png"
+        ],
+        "prompt": "Use case: compositing. Stitch all five supplied screenshots of the SAME Path of Exile 2 hideout into ONE continuous wide panorama of this section. These are overlapping views, not separate scenes. Preserve isometric orientation, exact relative layout, buildings, decoration, scale, game textures, lighting and vegetation. Use matching static landmarks to align overlaps; shared structures appear only ONCE. Western cooking, dining and pavilion area. Input 1 patterned rectangular canopy corridor with palms; main market's workbench/crates visible upper-right and thatched hut to left. Input 2 immediately LEFT of corridor: roasting spit, food stalls and baskets at left, long dining table above, orange cauldron below-left, SAME hut above-right. Input 3 same dining table/roast/hut viewed farther up-left: path junction, two braziers and red arches upper-left, storage lean-to upper edge. Input 4 same lean-to and flowering tree left, cliff shades right, SAME hut below. Input 5 western domed pavilion above-left of dining junction with red arches/two braziers descending toward dining table, same lean-to and flowering tree to right. Preserve a single instance of hut, lean-to, dining table, spit, cauldron and canopy corridor. Western pavilion is upper-left, dining clearing lower-left, hut center, long patterned canopy corridor right toward market. Retain visible path beyond pavilion at top-left for later connection. Remove all HUD, minimap, text, Windows activation overlay, cursor, overhead bars and the moving gold/orange player at each screenshot center with its purple selection ring. Retain stationary NPCs and decorative guards in their correct positions, including intentional groups of identical guards. No new buildings, no beautification/redesign, no rearrangement, no collage panels, no labels. Include the union of visible scene content, not just common overlap; use source evidence for hidden areas and minimal fill for small gaps. Highest detail and largest practical output. Output only the continuous scene.",
+        "transparent_background": false
+      },
+      "output": "output/imagegen/poe2-full-west-v1.png",
+      "output_dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "retreat",
+      "arguments": {
+        "referenced_image_paths": [
+          "poe2/Capture d'écran 2026-10-26 004303.png",
+          "poe2/Capture d'écran 2026-10-26 004308.png",
+          "poe2/Capture d'écran 2026-10-26 004312.png",
+          "poe2/Capture d'écran 2026-10-26 004317.png",
+          "poe2/Capture d'écran 2026-10-26 004323.png"
+        ],
+        "prompt": "Use case: compositing. Stitch all five supplied screenshots of the SAME Path of Exile 2 hideout into ONE continuous wide panorama of this section. These are overlapping views, not separate scenes. Preserve isometric orientation, exact relative layout, buildings, decoration, scale, game textures, lighting and vegetation. Use matching static landmarks to align overlaps; shared structures appear only ONCE. Far western pavilion, private furnished retreat and wooded coastal path. Input 1 western domed pavilion with arches/braziers leading down-right toward dining clearing; lean-to and red flowering tree right. Input 2 extends UP-LEFT beyond SAME pavilion (visible bottom-right) to private furnished clearing at left with dark screens, bed, small pale round table, canopy and orange brazier; guards border path right. Input 3 same furnished clearing in full, canopy/rugs/vase upper-left, bed and round table left, orange brazier middle, entrance with two guards right. Input 4 wooded rocky guard-lined path extends UP-RIGHT from clearing 3, torch, trees, water outside left cliff. Input 5 far end of SAME path under dense trees with water to upper-left, cliff to right. Keep the path continuous and preserve dense overhanging foliage; do not invent a second settlement. Layout pavilion bottom-right, furnished retreat above-left of pavilion, narrow guarded wooded coastal extension above retreat. Preserve partial dining junction at lower-right as overlap. Remove all HUD, minimap, text, Windows activation overlay, cursor, overhead bars and the moving gold/orange player at each screenshot center with its purple selection ring. Retain stationary NPCs and decorative guards in their correct positions, including intentional groups of identical guards. No new buildings, no beautification/redesign, no rearrangement, no collage panels, no labels. Include the union of visible scene content, not just common overlap; use source evidence for hidden areas and minimal fill for small gaps. Highest detail and largest practical output. Output only the continuous scene.",
+        "transparent_background": false
+      },
+      "output": "output/imagegen/poe2-full-retreat-v1.png",
+      "output_dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "id": "full-v1",
+      "arguments": {
+        "referenced_image_paths": [
+          "output/imagegen/poe2-full-east-v1.png",
+          "output/imagegen/poe2-full-north-v1.png",
+          "output/imagegen/poe2-full-west-v1.png",
+          "output/imagegen/poe2-full-retreat-v1.png",
+          "poe2/Capture d'écran 2026-10-26 004144.png"
+        ],
+        "prompt": "Use case: compositing. Merge these FOUR overlapping section panoramas into ONE coherent continuous panorama showing the ENTIRE Path of Exile 2 coastal hideout. Input 5 is an original screenshot provided ONLY for the waypoint/dock entrance detail correction. Preserve the screenshot-like game rendering, isometric orientation, materials, sunlight, vegetation, all distinct areas and their relative spatial relationships. Aim for a high-resolution ultrawide panorama, approximately 3:1, preferably 3840 pixels wide. Zoom out to fit the entire hideout with all endpoints; do NOT crop or omit the western retreat or long eastern dock.\n\nInput 1: EAST section: central market on left, red-flowering tree grove upper-left, red seated statue/blue waypoint near middle, long guarded dock extends far right, multi-turret temple and orange pedestal lower-right.\nInput 2: NORTH section: overlaps input 1's SAME market/grove/waypoint on right and adds cyan well above-left of grove, plus cliff path with THREE hanging red/gold cloth shades extending left to storage lean-to and thatched hut.\nInput 3: WEST section: overlaps input 2's SAME lean-to, flowering tree, cloth shades and hut at its top/center. Adds long dining table, cooking spit, food stall, glowing cauldron to left/below hut, rectangular patterned cloth canopy corridor on right (connecting toward the central market), western domed pavilion upper-left.\nInput 4: RETREAT section: overlaps input 3's SAME western domed pavilion, red arches, lean-to and flowering tree at lower-right. Adds private furnished clearing with bed, small pale table, folding screens, rugs, vase and brazier on left, then narrow wooded guard-lined rocky coastal path above. Preserve these unique areas in full.\nInput 5: ORIGINAL screenshot of blue waypoint, seated red statue and landward dock. This is detail evidence, NOT another area. Correct the repeated portal effects in sections 1/2: there is ONE blue waypoint effect within the stone arch structure below the ONE seated red statue. Keep that original arrangement and do not create a row of separate magical gateways.\n\nSpatial joining instructions:\nThe whole hideout extends from the private retreat and wooded path at FAR LEFT, through the western domed pavilion and dining/cooking clearing LEFT-OF-CENTER, through the thatched hut, central vegetation, cloth-canopy corridor and upper cliff-shade connecting path in CENTER, to the main market and cyan well RIGHT-OF-CENTER, ending at the shoreline statue/waypoint and guarded dock FAR RIGHT. The eastern multi-turret temple lies BELOW the market/dock entrance. The private retreat's guarded wooded path extends above it along its own rocky coastal edge. Use matching landmarks to unite overlaps, not side-by-side panels. Retain the vegetated separations between paths. Align shared lean-to/hut, pavilion, cloth shades, market awnings, workbench, tree, rocks and paving rather than inventing connectors. Each shared landmark appears ONCE.\n\nThere are TWO DIFFERENT domed complexes: the single western pavilion near dining/retreat and the eastern multi-turret temple near the dock. Preserve both; do not merge them or create a third. Preserve ONE cyan well, ONE seated red statue, ONE blue waypoint, ONE long dock with its intentional formation of stationary guards, ONE furnished private retreat, ONE cooking/dining clearing, ONE large rectangular cloth canopy corridor. Preserve the NPCs/guards as shown. No moving player, HUD, text, minimap, bars, labels, watermark, framing or collage seams. Do not redesign, beautify into another settlement, add structures, invent paths, or compress the whole place into one circular courtyard. Preserve source detail as closely as possible; use minimal fill only for small gaps. Output only the full continuous panorama.",
+        "transparent_background": false
+      },
+      "output": "output/imagegen/poe2-full-hideout-v1.png",
+      "output_dimensions": [
+        2172,
+        724
+      ]
+    },
+    {
+      "id": "full-v2",
+      "arguments": {
+        "referenced_image_paths": [
+          "output/imagegen/poe2-full-hideout-v1.png",
+          "output/imagegen/poe2-full-retreat-v1.png",
+          "output/imagegen/poe2-full-west-v1.png",
+          "poe2/Capture d'écran 2026-10-26 004144.png"
+        ],
+        "prompt": "Edit/composite the panorama in INPUT 1 to restore missing source areas. Input 1 is the edit target. Its market, northern well, eastern dock and eastern temple must remain present. INPUT 2 is the missing far-western retreat section to integrate. INPUT 3 is the western dining/canopy section and provides the overlap alignment. INPUT 4 is the original waypoint screenshot for detail correction.\n\nCRITICAL PRIMARY CHANGE: Expand/reframe the canvas to include ALL of input 2's private retreat and wooded coastal path. Do NOT deliver another image without them. The distinct furnished retreat has a bed, round pale table, large dark folding screens, rug/canopy, decorative vase and one brazier. It lies to the LEFT and ABOVE the western domed pavilion currently at the upper-left of input 1. Match the SAME western domed pavilion and the flowering tree/lean-to/arches in inputs 1, 2 and 3, showing that pavilion once, and extend beyond it. The retreat's rocky wooded guard-lined path goes upward along its coastal edge and must also be visible, not cut off or replaced by empty water. The final image must show that furnished clearing unmistakably and include its bed and screens.\n\nKeep the rest of input 1's hideout. Also retain the distinctive rectangular patterned-cloth canopy corridor shown at RIGHT of input 3 in the vegetation BETWEEN the western hut/dining area and central market, which input 1 omitted. Preserve its cloth roof strips rather than replacing it with trees. These extensions are parts of the same connected hideout, not separate vignettes or inset panels. Use a wider/taller framing as needed, e.g. a generous landscape canvas with enough height for the upper-left retreat; do not crop endpoints to force a thin banner.\n\nWaypoint correction: input 1 incorrectly shows multiple independent blue portals. Input 4 is original scene evidence: preserve the physical stone arch frames but make ONE continuous blue-purple waypoint glow at the structure just below the red seated statue; remove the extra separate luminous doorway disks repeated along the path. Keep one red statue, one well, one dock. Two distinct domed complexes: western single pavilion and eastern many-turret temple.\n\nPreserve original game-rendered isometric perspective, fine textures, lighting, scale, scene topology and NPCs/guards. No HUD, player avatar, selection circles, labels, text, seams, panels or new invented structures. Return only the corrected continuous panorama including the whole retreat, wooded path, cooking area, canopy corridor, market, well, waypoint, eastern temple and full dock.",
+        "transparent_background": false
+      },
+      "output": "output/imagegen/poe2-full-hideout-v2.png",
+      "output_dimensions": [
+        2072,
+        759
+      ]
+    }
+  ],
+  "review_status": "Needs user review; visible fidelity defects remain. Not accepted.",
+  "sha256": {
+    "output/imagegen/poe2-full-east-v1.png": "64608f90fb173423cc433b7716e9ad6b64c36c2364ce59e17c8688e0088814df",
+    "output/imagegen/poe2-full-hideout-v1.png": "37c7de96dde0184cf587b683d4633c9d938f11cce55136f96cc145ba87be0306",
+    "output/imagegen/poe2-full-hideout-v2.png": "f7f12b67ce50d146911a728a761971a6bfad08c09f3ef49450410190241c69ab",
+    "output/imagegen/poe2-full-north-v1.png": "f6276f7a5cec55b69f0ff54d21f20133bcb2d30a25c18517dcf5a8d06eca0eef",
+    "output/imagegen/poe2-full-retreat-v1.png": "0bed37a77a933955b7861287020a66ec9e4d5e153a6c00e4bf0f3984c2ccbf2f",
+    "output/imagegen/poe2-full-west-v1.png": "1d4cb55798aa77f2d691e39120010b70b8c388a2b217c352fa50c8a7303b7f46",
+    "poe2/Capture d'écran 2026-10-26 004136.png": "702c1d011142e324832d4a41d605304a0509cc1e676e0d44e724c2450b3e6bd7",
+    "poe2/Capture d'écran 2026-10-26 004144.png": "ee36b9ba4f39dbfafdaf9c3c028268dc6961b2337b4efb6ee0ea4edbcec1d6ba",
+    "poe2/Capture d'écran 2026-10-26 004153.png": "4f362726b00bb523dfd871be515b17c9096ccb60c4c80991a166c1a44ae93b9a",
+    "poe2/Capture d'écran 2026-10-26 004203.png": "c30adf43e1fc5ef6ce25e8ca0fec44b04d3e2202c864d2ec62851539f48ef945",
+    "poe2/Capture d'écran 2026-10-26 004209.png": "334b9cd8be45ec08aa4c6c39a2092a48708a42c881501375e64b480a64158f38",
+    "poe2/Capture d'écran 2026-10-26 004217.png": "931b9687af124c410fd5ca82faab46ad9322aab75bf0acdf6a10d228b3e075a8",
+    "poe2/Capture d'écran 2026-10-26 004226.png": "8ce061ab06565f520d12af2706825acf33be3834c2e4f88e8aec21ae8fe66be4",
+    "poe2/Capture d'écran 2026-10-26 004231.png": "442f3766b33add0f986516c3f5b8089da2809f8cfd59dc4ec675e79579ce38d5",
+    "poe2/Capture d'écran 2026-10-26 004241.png": "380a6f7d8a80d888f32b5cf40e4796904ae015e091b7394a6277ac9d19fbb5b0",
+    "poe2/Capture d'écran 2026-10-26 004250.png": "8dc26fcae2f7f86676e934c6415ec7d50bc3a4b5d35d7a10922702e75d56a6df",
+    "poe2/Capture d'écran 2026-10-26 004257.png": "675542cd9b1f0c67c89496a4b710d3f6eecdf985767f216c7f725b61bfe35b84",
+    "poe2/Capture d'écran 2026-10-26 004303.png": "c58b3bbb1cd7a34c8a239cd38e7aafe3417f7c261b1cc475e4365786eb2f5750",
+    "poe2/Capture d'écran 2026-10-26 004308.png": "c10ba8f23efce3e940d4ccab88d540ea4b38ad630a0279c4c8133f083a63accc",
+    "poe2/Capture d'écran 2026-10-26 004312.png": "768fdea8aaa4bd29262a4622f62ed0ec69d029c01827d5fe0f422c48c5f1a174",
+    "poe2/Capture d'écran 2026-10-26 004317.png": "ae633ab461545da26030e40fac9aafcadf64cf25263c158fecf1b4b5d595e6d9",
+    "poe2/Capture d'écran 2026-10-26 004323.png": "49d382fffaaeb36fbbd5a1354410e98ef1fb4a00a5834a3a9443cc3c51253d5a"
+  }
+}

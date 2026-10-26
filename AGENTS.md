@@ -15,10 +15,11 @@ Combine overlapping gameplay screenshots into a continuous, HUD-free panorama us
 ## Files
 
 - `README.md`: overview and accepted example.
-- `poe2/`: the two original hideout screenshots, in the order recorded in the manifest.
+- `poe2/`: current 16-image full-hideout source set. The first two-image source set is available in Git history at `82b38a6`.
 - `output/imagegen/poe2-hideout-v1.png`: accepted first result.
 - `output/imagegen/poe2-hideout-v1.md`: exact prompt and review.
 - `output/imagegen/poe2-hideout-v1.json`: tool arguments, input order and checksums.
+- `output/imagegen/poe2-full-test.md`: full-hideout experiment review; adjacent JSON records all six successful calls.
 - `docs/WORKFLOW.md`: repeatable procedure and review criteria.
 - `docs/RECENT_CHANGES.md`: recent repository changes.
 

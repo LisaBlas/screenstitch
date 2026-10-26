@@ -38,3 +38,7 @@ Record visible errors and obtain user feedback before calling an output accepted
 ## Reproduction limits
 
 Generation is nondeterministic. The saved inputs, prompt and settings reproduce the procedure, not identical output pixels. The first run used a tool-selected model whose exact version was not exposed. No geometric accuracy benchmark or automated fidelity test has been run.
+
+## Larger screenshot sets
+
+The built-in tool rejected a call with 16 `referenced_image_paths` on 2026-10-26: at most five paths are accepted per call. The [full-hideout experiment](../output/imagegen/poe2-full-test.md) used four overlapping sections followed by a merge and revision. This produced a broad overview but omitted a canopy corridor and retained repeated waypoint effects. Treat this as an experimental workaround, not a validated fidelity-preserving procedure. Save intermediate sections because they reveal details lost during merging. Requested output dimensions in prompt text are not guaranteed.

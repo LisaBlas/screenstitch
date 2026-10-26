@@ -10,13 +10,14 @@ The first accepted example combines two Path of Exile 2 hideout screenshots. The
 
 Follow [docs/WORKFLOW.md](docs/WORKFLOW.md). No local application or Python dependencies are required for the current built-in image-tool workflow.
 
-- [Source screenshots](poe2/)
+- [Current full-hideout source screenshots](poe2/)
+- [Full-hideout test and review](output/imagegen/poe2-full-test.md)
 - [Successful prompt and review](output/imagegen/poe2-hideout-v1.md)
 - [Exact run arguments and checksums](output/imagegen/poe2-hideout-v1.json)
 
 ## Repository layout
 
-- `poe2/`: original screenshots; preserve these files.
+- `poe2/`: current 16-image full-hideout source set; preserve these files. The earlier two-image source set is available in Git history at `82b38a6`.
 - `output/imagegen/`: saved results and their reproduction records.
 - `docs/`: workflow and recent changes.
 - `AGENTS.md`: instructions for future agents; `CLAUDE.md` links to it.
