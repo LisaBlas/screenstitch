@@ -8,6 +8,10 @@ See [results and comparison](output/geometry/REVIEW.md) and
 source colours but still have seams, duplicated figures and holes. The larger
 image-generation attempts were rejected for lost detail and changed colours.
 
+[Local alignment trials](output/geometry/LOCAL_REVIEW.md) retain original pixels
+and protect one NPC from seam cuts, but still show distortion and misalignment.
+No tested method has produced an accepted full-hideout reconstruction.
+
 The first accepted example combines two Path of Exile 2 hideout screenshots. The model removes the HUD and moving player, joins shared landmarks, and fills small gaps. It can change scene details; the result is not a pixel-exact reconstruction.
 
 ![PoE2 hideout composite](output/imagegen/poe2-hideout-v1.png)

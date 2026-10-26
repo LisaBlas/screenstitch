@@ -1,0 +1,167 @@
+{
+  "inputs": [
+    {
+      "path": "poe2/Capture d'\u00e9cran 2026-10-26 004203.png",
+      "sha256": "c30adf43e1fc5ef6ce25e8ca0fec44b04d3e2202c864d2ec62851539f48ef945",
+      "size": [
+        2559,
+        1439
+      ]
+    },
+    {
+      "path": "poe2/Capture d'\u00e9cran 2026-10-26 004209.png",
+      "sha256": "334b9cd8be45ec08aa4c6c39a2092a48708a42c881501375e64b480a64158f38",
+      "size": [
+        2548,
+        1426
+      ]
+    },
+    {
+      "path": "poe2/Capture d'\u00e9cran 2026-10-26 004217.png",
+      "sha256": "931b9687af124c410fd5ca82faab46ad9322aab75bf0acdf6a10d228b3e075a8",
+      "size": [
+        2559,
+        1439
+      ]
+    }
+  ],
+  "masks": {
+    "description": "Normalized rectangles for the current PoE2 screenshots. UI and central player/ring are excluded; peripheral followers need separate review. Saved runs embed their mask configuration.",
+    "rectangles": {
+      "top_left_icon": [
+        0.0,
+        0.0,
+        0.065,
+        0.085
+      ],
+      "minimap": [
+        0.845,
+        0.0,
+        1.0,
+        0.285
+      ],
+      "left_hud": [
+        0.0,
+        0.785,
+        0.285,
+        1.0
+      ],
+      "right_hud_and_watermark": [
+        0.7,
+        0.785,
+        1.0,
+        1.0
+      ],
+      "bottom_bar": [
+        0.0,
+        0.975,
+        1.0,
+        1.0
+      ],
+      "player_and_ring": [
+        0.43,
+        0.32,
+        0.57,
+        0.55
+      ],
+      "speech_overlay": [
+        0.0,
+        0.72,
+        0.018,
+        0.79
+      ]
+    }
+  },
+  "versions": {
+    "opencv": "4.11.0",
+    "numpy": "2.2.6"
+  },
+  "script_sha256": "be55facd2506100710aa4bda2fc7682b583f7a8aff56b1c96f507213e87e9c6b",
+  "parameters": {
+    "grid": [
+      20,
+      12
+    ],
+    "curvature_penalty": 0.25,
+    "zero_displacement_penalty": 0.015,
+    "huber_px": 12,
+    "padding": 160,
+    "seam_scale": 0.35
+  },
+  "limits": "Multiple RANSAC clusters are geometric hypotheses, not semantic/depth labels. Prefilter uses all matches before holdout. Peripheral figures are not fully masked.",
+  "pairs": [
+    {
+      "source_index": 1,
+      "mutual_matches": 260,
+      "cluster_counts": [
+        127,
+        42,
+        19,
+        17
+      ],
+      "accepted": 205,
+      "held_out": 69,
+      "mesh_error": {
+        "median_px": 4.4677934404162345,
+        "p90_px": 60.97978018614283
+      },
+      "minimum_sampled_jacobian": 0.15063440799713135,
+      "maximum_displacement_px": 231.51901245117188
+    },
+    {
+      "source_index": 2,
+      "mutual_matches": 261,
+      "cluster_counts": [
+        84,
+        35,
+        33,
+        19,
+        15
+      ],
+      "accepted": 186,
+      "held_out": 62,
+      "mesh_error": {
+        "median_px": 5.306635235399346,
+        "p90_px": 25.06279686433553
+      },
+      "minimum_sampled_jacobian": 0.1544535756111145,
+      "maximum_displacement_px": 260.4035339355469
+    }
+  ],
+  "outputs": {
+    "local-distance": {
+      "size": [
+        3884,
+        2693
+      ],
+      "covered_pixels": 6440531,
+      "origin": [
+        -1325,
+        -592
+      ]
+    },
+    "local-seams": {
+      "size": [
+        3884,
+        2693
+      ],
+      "covered_pixels": 6440531,
+      "origin": [
+        -1325,
+        -592
+      ]
+    }
+  },
+  "seam_fallback_pixels": 13703,
+  "protected_reference_rectangle": [
+    880,
+    420,
+    1090,
+    810
+  ],
+  "verification": {
+    "exact_source_pixels_checked": 6440531,
+    "status": "passed",
+    "scope": "Every visible local-seams pixel matches selected original RGB and is outside exclusion masks; geometry and mask completeness require visual review."
+  }
+}

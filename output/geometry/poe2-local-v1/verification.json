@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "source_pixel_check": {
+    "exact_source_pixels_checked": 6440531,
+    "status": "passed",
+    "scope": "Every visible local-seams pixel matches selected original RGB and is outside exclusion masks; geometry and mask completeness require visual review."
+  },
+  "alpha_owner_coverage": "passed",
+  "reference_npc_rectangle_uses_only_source_1": "passed",
+  "script_snapshot_sha256": "passed",
+  "scope": "Does not establish geometrical correctness or removal of every moving figure."
+}

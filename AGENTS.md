@@ -24,6 +24,7 @@ Combine overlapping gameplay screenshots into a continuous, HUD-free panorama wh
 - `docs/WORKFLOW.md`: repeatable procedure and review criteria.
 - `experiments/`: source-pixel comparison, mask configuration, integrity verification and reproduction instructions.
 - `output/geometry/REVIEW.md`: three-image test results and limitations. Affine fits sampled landmarks best but distorts outer scenery; sphere does not solve the tested overlaps. Original-resolution PNGs, previews, masks, source maps and reports are retained in versioned directories.
+- `output/geometry/LOCAL_REVIEW.md`: local-mesh and graph-cut seam trials. Flexible warps bend scenery; limited-stretch warps leave larger misalignments. Neither is a clear overall improvement. `experiments/local_stitch.py` implements the test, with exact final source-pixel verification and three numerical tests in `experiments/test_local_stitch.py`.
 - `docs/RECENT_CHANGES.md`: recent repository changes.
 
 ## Conventions

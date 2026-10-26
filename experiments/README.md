@@ -12,6 +12,24 @@ passed. Visual quality does not pass: affine is the best diagnostic, but seams,
 duplicated figures and holes remain. See [review and comparison](../output/geometry/REVIEW.md).
 V3 uses a tighter player/ring mask; peripheral followers are not fully masked.
 
+Two local-mesh trials are also complete. Wider matching and object-aware source
+selection preserve the reference NPC, but flexible warps bend the path/canopy;
+limiting stretch increases alignment errors. Neither is a clear overall gain.
+See [local review and comparison](../output/geometry/LOCAL_REVIEW.md).
+
+Run a new local trial with the installed environment:
+
+```sh
+OPENBLAS_NUM_THREADS=2 .venv/bin/python experiments/local_stitch.py --output output/geometry/poe2-local-v3
+OPENBLAS_NUM_THREADS=2 .venv/bin/python -m unittest discover -s experiments -p 'test_*.py' -v
+```
+
+The local script verifies every visible final pixel against its original source
+and mask. Saved grids and source maps allow inspection. Its landmark residuals
+are not directly comparable with the old affine fit because match selection
+differs. The numerical tests cover interpolation, unseen-point fitting with
+outliers, and reflection/stretch rejection, not game-scene correctness.
+
 ## Run
 
 The pinned dependencies are installed in `.venv` with user approval. To recreate

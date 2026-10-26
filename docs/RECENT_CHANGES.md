@@ -12,6 +12,8 @@
 
 ## 2026-10-26
 
+- Tested wider multi-cluster feature matching, regularized local meshes, graph-cut seams and a protected NPC region on the same three screenshots. Saved flexible and limited-stretch trials plus a common-coordinate comparison in `output/geometry/poe2-local-v1` and `poe2-local-v2`. Both pass exact final pixel/mask and coverage checks, but neither passes visual quality review. Added three passing numerical tests; fixed a reflection acceptance bug caught by the synthetic test and recorded it in the shared failure journal. See `output/geometry/LOCAL_REVIEW.md`.
+
 - Installed approved pinned OpenCV/NumPy packages in `.venv`; completed three source-pixel comparison runs. Added affine rendering, per-pair focal scoring, match-location diagnostics and tighter player masks. Affine improves sampled alignment but all models retain visual defects. Saved results and review in `output/geometry/`; source-hash, alpha/coverage and exact flat-pixel verification passed for every run.
 
 - Recorded the user's rejection of the full-hideout image-generation results. Prepared a source-pixel flat/sphere comparison with conservative UI/player masks, transparent missing areas, source maps and geometry metrics. Syntax check passed; execution and visual review are pending approval to install pinned OpenCV/NumPy dependencies. See `experiments/README.md`.

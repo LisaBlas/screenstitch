@@ -1,0 +1,5 @@
+{
+  "command": "OPENBLAS_NUM_THREADS=2 PYTHONPATH=experiments .venv/bin/python output/geometry/poe2-local-v1/local_stitch.py --output <new-directory>",
+  "reference": "output/geometry/poe2-v3/report.json",
+  "shared_helpers_sha256": "de5595f739014b36cdd5bd36bb00dd68d538f31f2b68f680093e0049f2f6a2a5"
+}
