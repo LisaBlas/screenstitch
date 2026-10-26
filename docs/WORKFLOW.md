@@ -3,8 +3,9 @@
 Historical image-generation workflow. On 2026-10-26 the user rejected the
 full-hideout results for lost detail, blurred NPC faces and brighter colours.
 The current experiment uses source pixels, masks and geometric alignment; see
-[experiments/README.md](../experiments/README.md). Its execution is pending
-dependency-install approval. No new projection has been validated.
+[experiments/README.md](../experiments/README.md). Three source-pixel test runs
+are saved with [review and limitations](../output/geometry/REVIEW.md). None is
+accepted as a clean panorama.
 
 ## Proven example
 

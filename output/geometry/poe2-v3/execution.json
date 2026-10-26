@@ -1,0 +1,11 @@
+{
+  "command": ".venv/bin/python experiments/compare_projections.py --output output/geometry/poe2-v3",
+  "source_indices": [
+    3,
+    4,
+    5
+  ],
+  "script_sha256": "de5595f739014b36cdd5bd36bb00dd68d538f31f2b68f680093e0049f2f6a2a5",
+  "script_revision": "revision accompanying output/geometry/REVIEW.md",
+  "mask_configuration": "report.json:masks"
+}

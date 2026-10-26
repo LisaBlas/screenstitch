@@ -2,13 +2,13 @@
 
 ## Purpose
 
-Combine overlapping gameplay screenshots into a continuous, HUD-free panorama while preserving source detail and colours. The first generated pair was accepted, but the user rejected the later full-hideout results for lost detail, blurred faces and brighter colours. A source-pixel geometry experiment is now prepared; execution is pending dependency-install approval.
+Combine overlapping gameplay screenshots into a continuous, HUD-free panorama while preserving source detail and colours. The first generated pair was accepted, but the user rejected the later full-hideout results for lost detail, blurred faces and brighter colours. Source-pixel flat, affine and spherical experiments have run; no clean panorama is accepted yet.
 
 ## Current workflow
 
 - Read `experiments/README.md` for the current source-pixel experiment. `docs/WORKFLOW.md` records the earlier image-generation method.
 - Inspect all source images before prompting. Identify shared landmarks and describe the spatial relationship between the views.
-- Test flat and spherical geometry with explicit masks using `experiments/compare_projections.py`. Dependencies are pinned in `experiments/requirements.txt`; ask before installing them.
+- Test flat, affine and spherical geometry with explicit masks using `experiments/compare_projections.py`. Dependencies are pinned in `experiments/requirements.txt` and installed in `.venv` with user approval. Ask before new dependency installations.
 - The user cannot hide the UI or player in-game. Mask them in the source images, recover hidden areas from overlapping views where possible, and leave uncovered areas transparent.
 - Preserve scene layout and important details; remove HUD and handle moving characters explicitly.
 - Generation may alter details. Do not describe results as pixel-exact or geometrically verified without evidence.
@@ -22,7 +22,8 @@ Combine overlapping gameplay screenshots into a continuous, HUD-free panorama wh
 - `output/imagegen/poe2-hideout-v1.json`: tool arguments, input order and checksums.
 - `output/imagegen/poe2-full-test.md`: full-hideout experiment review; adjacent JSON records all six successful calls.
 - `docs/WORKFLOW.md`: repeatable procedure and review criteria.
-- `experiments/`: prepared source-pixel projection comparison, mask configuration and reproduction instructions; no geometry result validated yet.
+- `experiments/`: source-pixel comparison, mask configuration, integrity verification and reproduction instructions.
+- `output/geometry/REVIEW.md`: three-image test results and limitations. Affine fits sampled landmarks best but distorts outer scenery; sphere does not solve the tested overlaps. Original-resolution PNGs, previews, masks, source maps and reports are retained in versioned directories.
 - `docs/RECENT_CHANGES.md`: recent repository changes.
 
 ## Conventions

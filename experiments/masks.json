@@ -1,11 +1,47 @@
 {
-  "description": "Conservative normalized rectangles for the current PoE2 screenshots. 0 = excluded. These masks include some valid scenery; inspect mask previews before accepting a composite.",
+  "description": "Normalized rectangles for the current PoE2 screenshots. UI and central player/ring are excluded; peripheral followers need separate review. Saved runs embed their mask configuration.",
   "rectangles": {
-    "top_left_icon": [0.0, 0.0, 0.065, 0.085],
-    "minimap": [0.845, 0.0, 1.0, 0.285],
-    "left_hud": [0.0, 0.785, 0.285, 1.0],
-    "right_hud_and_watermark": [0.70, 0.785, 1.0, 1.0],
-    "bottom_bar": [0.0, 0.975, 1.0, 1.0],
-    "player_and_followers": [0.34, 0.30, 0.66, 0.75]
+    "top_left_icon": [
+      0.0,
+      0.0,
+      0.065,
+      0.085
+    ],
+    "minimap": [
+      0.845,
+      0.0,
+      1.0,
+      0.285
+    ],
+    "left_hud": [
+      0.0,
+      0.785,
+      0.285,
+      1.0
+    ],
+    "right_hud_and_watermark": [
+      0.7,
+      0.785,
+      1.0,
+      1.0
+    ],
+    "bottom_bar": [
+      0.0,
+      0.975,
+      1.0,
+      1.0
+    ],
+    "player_and_ring": [
+      0.43,
+      0.32,
+      0.57,
+      0.55
+    ],
+    "speech_overlay": [
+      0.0,
+      0.72,
+      0.018,
+      0.79
+    ]
   }
 }

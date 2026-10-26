@@ -3,8 +3,9 @@
 Combine overlapping game screenshots into a panorama while preserving source detail.
 
 The current experiment compares flat and spherical alignment with UI/player masks.
-See [experiment instructions](experiments/README.md). The script is prepared;
-execution is pending approval to install its pinned dependencies. The larger
+See [results and comparison](output/geometry/REVIEW.md) and
+[experiment instructions](experiments/README.md). Three-image tests preserve
+source colours but still have seams, duplicated figures and holes. The larger
 image-generation attempts were rejected for lost detail and changed colours.
 
 The first accepted example combines two Path of Exile 2 hideout screenshots. The model removes the HUD and moving player, joins shared landmarks, and fills small gaps. It can change scene details; the result is not a pixel-exact reconstruction.

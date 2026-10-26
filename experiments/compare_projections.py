@@ -148,24 +148,24 @@ def main():
     focal_grid = width*np.geomspace(.5, 16, 36)
     focal_results = []
     for focal in focal_grid:
-        errors = []
+        pair_errors = []
         for pair in pairs:
             i, a, b, t = (pair[k] for k in ('i', 'a', 'b', 'train'))
             ki, k0 = intrinsic(images[i], focal), intrinsic(images[0], focal)
             r = rotation_fit(a[t], b[t], ki, k0)
             pred = project(a[t], k0 @ r @ np.linalg.inv(ki))
-            errors.extend(np.linalg.norm(pred-b[t], axis=1))
-        focal_results.append(float(np.median(errors)))
+            pair_errors.append(float(np.median(np.linalg.norm(pred-b[t], axis=1))))
+        focal_results.append(float(np.mean(pair_errors)))
     best_index = int(np.argmin(focal_results))
     best_focal = float(focal_grid[best_index])
     report = {'inputs': [{'path': str(p), 'sha256': hashlib.sha256(p.read_bytes()).hexdigest(),
                            'size': list(im.shape[1::-1])} for p, im in zip(paths, images)],
               'versions': {'opencv': cv.__version__, 'numpy': np.__version__},
               'masks': config, 'pairs': [], 'outputs': {},
-              'method': 'SIFT ratio 0.7; homography RANSAC 8px prefilter; every third accepted match held out; focal chosen on training matches.',
+              'method': 'SIFT ratio 0.7; homography RANSAC 8px prefilter; every third accepted match held out; focal chosen by mean of per-pair training median errors.',
               'limits': 'Metrics describe a dominant plane after prefilter, not all objects. Sphere assumes shared focal length, centred principal point and pure rotation. No calibration or depth recovery. Conservative masks may leave followers outside the central region.',
               'sphere_focal_px': best_focal, 'sphere_grid_boundary': best_index in (0, len(focal_grid)-1),
-              'focal_search': [{'focal_px': float(f), 'training_median_px': e}
+              'focal_search': [{'focal_px': float(f), 'mean_pair_training_median_px': e}
                                for f, e in zip(focal_grid, focal_results)]}
     args.output.mkdir(parents=True)
     for j, (im, mask) in enumerate(zip(images, masks)):
@@ -179,12 +179,33 @@ def main():
         delta = np.rint(pair['delta']).astype(int)
         flat_layers.append((tuple(delta.tolist()), images[i], masks[i]))
         result = {'source_index': i, 'candidates': pair['candidates'], 'accepted': len(a),
+                  'matched_source_bounds': [a.min(axis=0).tolist(), a.max(axis=0).tolist()],
                   'held_out': int((~t).sum()), 'translation': delta.tolist(),
                   'translation_error': stats(np.linalg.norm(a[~t]+delta-b[~t], axis=1)),
                   'affine_matrix': pair['affine'].tolist(),
                   'affine_error': stats(np.linalg.norm(project(a[~t], pair['affine'])-b[~t], axis=1))}
         report['pairs'].append(result)
     report['outputs']['flat'] = composite(flat_layers, args.output, 'flat')
+    affine_layers = [((0, 0), images[0], masks[0])]
+    for pair in pairs:
+        i, matrix = pair['i'], pair['affine']
+        h, w = images[i].shape[:2]
+        corners = project(np.float32([[0, 0], [w, 0], [w, h], [0, h]]), matrix)
+        low, high = np.floor(corners.min(axis=0)).astype(int), np.ceil(corners.max(axis=0)).astype(int)
+        size = tuple((high-low).tolist())
+        if min(size) <= 0 or size[0]*size[1] > 60_000_000:
+            raise RuntimeError('Unreasonable affine extent')
+        local = matrix.copy()
+        local[:2, 2] -= low
+        warped = cv.warpAffine(images[i], local[:2], size, flags=cv.INTER_NEAREST)
+        wm = cv.warpAffine(masks[i], local[:2], size, flags=cv.INTER_NEAREST)
+        affine_layers.append((tuple(low.tolist()), warped, wm))
+        # Matching locations expose poor spatial support hidden by a low error.
+        debug = images[i].copy()
+        for x, y in pair['a']:
+            cv.circle(debug, (round(float(x)), round(float(y))), 8, (0, 0, 255), 2)
+        write_image(args.output / f'matches-{i}.jpg', cv.resize(debug, (1024, 576)))
+    report['outputs']['affine'] = composite(affine_layers, args.output, 'affine')
     for label, focal in [('sphere', best_focal), ('sphere-focal-width', float(width))]:
         warper = cv.PyRotationWarper('spherical', focal)
         layers = []

@@ -1,0 +1,414 @@
+{
+  "inputs": [
+    {
+      "path": "poe2/Capture d'\u00e9cran 2026-10-26 004203.png",
+      "sha256": "c30adf43e1fc5ef6ce25e8ca0fec44b04d3e2202c864d2ec62851539f48ef945",
+      "size": [
+        2559,
+        1439
+      ]
+    },
+    {
+      "path": "poe2/Capture d'\u00e9cran 2026-10-26 004209.png",
+      "sha256": "334b9cd8be45ec08aa4c6c39a2092a48708a42c881501375e64b480a64158f38",
+      "size": [
+        2548,
+        1426
+      ]
+    },
+    {
+      "path": "poe2/Capture d'\u00e9cran 2026-10-26 004217.png",
+      "sha256": "931b9687af124c410fd5ca82faab46ad9322aab75bf0acdf6a10d228b3e075a8",
+      "size": [
+        2559,
+        1439
+      ]
+    }
+  ],
+  "versions": {
+    "opencv": "4.11.0",
+    "numpy": "2.2.6"
+  },
+  "masks": {
+    "description": "Conservative normalized rectangles for the current PoE2 screenshots. 0 = excluded. These masks include some valid scenery; inspect mask previews before accepting a composite.",
+    "rectangles": {
+      "top_left_icon": [
+        0.0,
+        0.0,
+        0.065,
+        0.085
+      ],
+      "minimap": [
+        0.845,
+        0.0,
+        1.0,
+        0.285
+      ],
+      "left_hud": [
+        0.0,
+        0.785,
+        0.285,
+        1.0
+      ],
+      "right_hud_and_watermark": [
+        0.7,
+        0.785,
+        1.0,
+        1.0
+      ],
+      "bottom_bar": [
+        0.0,
+        0.975,
+        1.0,
+        1.0
+      ],
+      "player_and_followers": [
+        0.34,
+        0.3,
+        0.66,
+        0.75
+      ]
+    }
+  },
+  "pairs": [
+    {
+      "source_index": 1,
+      "candidates": 128,
+      "accepted": 83,
+      "held_out": 28,
+      "translation": [
+        -1164,
+        -432
+      ],
+      "translation_error": {
+        "median_px": 5.980642127070247,
+        "p90_px": 10.870760233939436
+      },
+      "affine_matrix": [
+        [
+          0.9160119464705059,
+          -0.1410818363858591,
+          -883.4399059575351
+        ],
+        [
+          0.007491221813050597,
+          0.8471716454971261,
+          -270.27427800754293
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "affine_error": {
+        "median_px": 0.8248843587613017,
+        "p90_px": 4.421276965669385
+      },
+      "sphere_error": {
+        "median_px": 4.872825048231729,
+        "p90_px": 11.961848394796506
+      },
+      "sphere_rotation": [
+        [
+          0.9847797341173397,
+          -0.0550625012237089,
+          -0.16485446985378072
+        ],
+        [
+          0.04493127935385242,
+          0.9969012214978301,
+          -0.06456883700177363
+        ],
+        [
+          0.16789894403303504,
+          0.05617895989714103,
+          0.9842021484722879
+        ]
+      ],
+      "sphere-focal-width_error": {
+        "median_px": 10.186980529813036,
+        "p90_px": 15.952853397829998
+      },
+      "sphere-focal-width_rotation": [
+        [
+          0.904502112323494,
+          -0.10933268282703638,
+          -0.41221631853698026
+        ],
+        [
+          0.04101189051017044,
+          0.98439911485972,
+          -0.17110349938030459
+        ],
+        [
+          0.4244925837268778,
+          0.1378577060930832,
+          0.8948750187772777
+        ]
+      ]
+    },
+    {
+      "source_index": 2,
+      "candidates": 172,
+      "accepted": 77,
+      "held_out": 26,
+      "translation": [
+        -838,
+        500
+      ],
+      "translation_error": {
+        "median_px": 20.436952901913685,
+        "p90_px": 247.49560503668033
+      },
+      "affine_matrix": [
+        [
+          1.2299910881467697,
+          -0.1729317635501915,
+          -1072.4831795152813
+        ],
+        [
+          0.006840187066817028,
+          1.3452729935208327,
+          420.46805262432053
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "affine_error": {
+        "median_px": 1.4206712485215605,
+        "p90_px": 3.597240859310669
+      },
+      "sphere_error": {
+        "median_px": 79.8383815866882,
+        "p90_px": 188.5468338133436
+      },
+      "sphere_rotation": [
+        [
+          0.9932065616875914,
+          -0.022542422730822333,
+          -0.11416026015271863
+        ],
+        [
+          0.03124432032767657,
+          0.9966924934305811,
+          0.07501910414281533
+        ],
+        [
+          0.11209156198382195,
+          -0.07807632622347181,
+          0.9906258471367851
+        ]
+      ],
+      "sphere-focal-width_error": {
+        "median_px": 87.00143282610662,
+        "p90_px": 201.20021204393632
+      },
+      "sphere-focal-width_rotation": [
+        [
+          0.9580610621793237,
+          0.014016762337563972,
+          -0.28622112345072925
+        ],
+        [
+          0.045447696444667084,
+          0.9787298146004244,
+          0.20005613437255565
+        ],
+        [
+          0.2829372863793295,
+          -0.20467408332710024,
+          0.9370458962028015
+        ]
+      ]
+    }
+  ],
+  "outputs": {
+    "flat": {
+      "size": [
+        3723,
+        2371
+      ],
+      "covered_pixels": 5728488,
+      "origin": [
+        -1164,
+        -432
+      ]
+    },
+    "sphere": {
+      "size": [
+        3692,
+        2445
+      ],
+      "covered_pixels": 5630885,
+      "origin": [
+        -2427,
+        9627
+      ]
+    },
+    "sphere-focal-width": {
+      "size": [
+        3517,
+        2363
+      ],
+      "covered_pixels": 5110453,
+      "origin": [
+        -2331,
+        2879
+      ]
+    }
+  },
+  "method": "SIFT ratio 0.7; homography RANSAC 8px prefilter; every third accepted match held out; focal chosen on training matches.",
+  "limits": "Metrics describe a dominant plane after prefilter, not all objects. Sphere assumes shared focal length, centred principal point and pure rotation. No calibration or depth recovery. Conservative masks may leave followers outside the central region.",
+  "sphere_focal_px": 6888.317185892399,
+  "sphere_grid_boundary": false,
+  "focal_search": [
+    {
+      "focal_px": 1279.5,
+      "training_median_px": 51.656118169220406
+    },
+    {
+      "focal_px": 1412.6825327456431,
+      "training_median_px": 53.68835038829677
+    },
+    {
+      "focal_px": 1559.7279705546262,
+      "training_median_px": 45.065315570785074
+    },
+    {
+      "focal_px": 1722.0792964730997,
+      "training_median_px": 38.124297161913354
+    },
+    {
+      "focal_px": 1901.3296929507255,
+      "training_median_px": 32.561873703722185
+    },
+    {
+      "focal_px": 2099.2381760235457,
+      "training_median_px": 28.13218726317389
+    },
+    {
+      "focal_px": 2317.7468568513373,
+      "training_median_px": 25.252534043123287
+    },
+    {
+      "focal_px": 2559.0000000000005,
+      "training_median_px": 22.89309980795737
+    },
+    {
+      "focal_px": 2825.3650654912863,
+      "training_median_px": 20.961753864747095
+    },
+    {
+      "focal_px": 3119.4559411092523,
+      "training_median_px": 19.382178566596885
+    },
+    {
+      "focal_px": 3444.1585929461994,
+      "training_median_px": 18.091235892632056
+    },
+    {
+      "focal_px": 3802.6593859014515,
+      "training_median_px": 17.036777186673252
+    },
+    {
+      "focal_px": 4198.4763520470915,
+      "training_median_px": 16.175813947577357
+    },
+    {
+      "focal_px": 4635.4937137026745,
+      "training_median_px": 15.472984739991645
+    },
+    {
+      "focal_px": 5118.000000000001,
+      "training_median_px": 14.899266534200498
+    },
+    {
+      "focal_px": 5650.7301309825725,
+      "training_median_px": 14.430889640507576
+    },
+    {
+      "focal_px": 6238.911882218506,
+      "training_median_px": 14.048424200810338
+    },
+    {
+      "focal_px": 6888.317185892399,
+      "training_median_px": 13.976857664344061
+    },
+    {
+      "focal_px": 7605.318771802902,
+      "training_median_px": 14.14657758945123
+    },
+    {
+      "focal_px": 8396.952704094185,
+      "training_median_px": 14.286583660623812
+    },
+    {
+      "focal_px": 9270.98742740535,
+      "training_median_px": 14.401951319827969
+    },
+    {
+      "focal_px": 10236.000000000002,
+      "training_median_px": 14.496934579387199
+    },
+    {
+      "focal_px": 11301.460261965145,
+      "training_median_px": 14.57508166488727
+    },
+    {
+      "focal_px": 12477.823764437013,
+      "training_median_px": 14.639341611697299
+    },
+    {
+      "focal_px": 13776.6343717848,
+      "training_median_px": 14.692158890996726
+    },
+    {
+      "focal_px": 15210.637543605804,
+      "training_median_px": 14.735555557270514
+    },
+    {
+      "focal_px": 16793.905408188366,
+      "training_median_px": 14.771201541123768
+    },
+    {
+      "focal_px": 18541.974854810695,
+      "training_median_px": 14.800474203433113
+    },
+    {
+      "focal_px": 20472.000000000007,
+      "training_median_px": 14.82450843172499
+    },
+    {
+      "focal_px": 22602.920523930294,
+      "training_median_px": 14.844238557455753
+    },
+    {
+      "focal_px": 24955.64752887403,
+      "training_median_px": 14.860433287887894
+    },
+    {
+      "focal_px": 27553.2687435696,
+      "training_median_px": 14.873724725650721
+    },
+    {
+      "focal_px": 30421.275087211612,
+      "training_median_px": 14.884632417512822
+    },
+    {
+      "focal_px": 33587.81081637673,
+      "training_median_px": 14.893583245059562
+    },
+    {
+      "focal_px": 37083.949709621396,
+      "training_median_px": 14.90092785071775
+    },
+    {
+      "focal_px": 40944.0,
+      "training_median_px": 14.906954185629644
+    }
+  ]
+}

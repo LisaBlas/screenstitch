@@ -1,0 +1,451 @@
+{
+  "inputs": [
+    {
+      "path": "poe2/Capture d'\u00e9cran 2026-10-26 004203.png",
+      "sha256": "c30adf43e1fc5ef6ce25e8ca0fec44b04d3e2202c864d2ec62851539f48ef945",
+      "size": [
+        2559,
+        1439
+      ]
+    },
+    {
+      "path": "poe2/Capture d'\u00e9cran 2026-10-26 004209.png",
+      "sha256": "334b9cd8be45ec08aa4c6c39a2092a48708a42c881501375e64b480a64158f38",
+      "size": [
+        2548,
+        1426
+      ]
+    },
+    {
+      "path": "poe2/Capture d'\u00e9cran 2026-10-26 004217.png",
+      "sha256": "931b9687af124c410fd5ca82faab46ad9322aab75bf0acdf6a10d228b3e075a8",
+      "size": [
+        2559,
+        1439
+      ]
+    }
+  ],
+  "versions": {
+    "opencv": "4.11.0",
+    "numpy": "2.2.6"
+  },
+  "masks": {
+    "description": "Normalized rectangles for the current PoE2 screenshots. UI and central player/ring are excluded; peripheral followers need separate review. Saved runs embed their mask configuration.",
+    "rectangles": {
+      "top_left_icon": [
+        0.0,
+        0.0,
+        0.065,
+        0.085
+      ],
+      "minimap": [
+        0.845,
+        0.0,
+        1.0,
+        0.285
+      ],
+      "left_hud": [
+        0.0,
+        0.785,
+        0.285,
+        1.0
+      ],
+      "right_hud_and_watermark": [
+        0.7,
+        0.785,
+        1.0,
+        1.0
+      ],
+      "bottom_bar": [
+        0.0,
+        0.975,
+        1.0,
+        1.0
+      ],
+      "player_and_ring": [
+        0.43,
+        0.32,
+        0.57,
+        0.55
+      ],
+      "speech_overlay": [
+        0.0,
+        0.72,
+        0.018,
+        0.79
+      ]
+    }
+  },
+  "pairs": [
+    {
+      "source_index": 1,
+      "candidates": 133,
+      "accepted": 86,
+      "matched_source_bounds": [
+        [
+          1179.7484130859375,
+          1043.438232421875
+        ],
+        [
+          1688.6649169921875,
+          1372.6324462890625
+        ]
+      ],
+      "held_out": 29,
+      "translation": [
+        -1165,
+        -432
+      ],
+      "translation_error": {
+        "median_px": 6.299266813511882,
+        "p90_px": 24.894480062367233
+      },
+      "affine_matrix": [
+        [
+          0.9210032730776396,
+          -0.12472841914972424,
+          -909.0785542719476
+        ],
+        [
+          0.008810277727061281,
+          0.8500981260440932,
+          -275.57400375733727
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "affine_error": {
+        "median_px": 0.9034766924658548,
+        "p90_px": 2.267346000391792
+      },
+      "sphere_error": {
+        "median_px": 6.584096213480597,
+        "p90_px": 14.979653328220863
+      },
+      "sphere_rotation": [
+        [
+          0.996107570193613,
+          -0.08368641385784435,
+          -0.027681993038615883
+        ],
+        [
+          0.08340708214663815,
+          0.9964537582418932,
+          -0.011098032861297812
+        ],
+        [
+          0.02851258056999304,
+          0.008745960280041563,
+          0.999555171527825
+        ]
+      ],
+      "sphere-focal-width_error": {
+        "median_px": 12.547412056357782,
+        "p90_px": 28.005536517284938
+      },
+      "sphere-focal-width_rotation": [
+        [
+          0.9045313757640249,
+          -0.11847309667722546,
+          -0.4096182559678583
+        ],
+        [
+          0.05032756905981808,
+          0.983574846940632,
+          -0.17334259793323412
+        ],
+        [
+          0.4234266477808999,
+          0.13617872752167412,
+          0.8956367724248528
+        ]
+      ]
+    },
+    {
+      "source_index": 2,
+      "candidates": 189,
+      "accepted": 75,
+      "matched_source_bounds": [
+        [
+          927.972412109375,
+          158.2773895263672
+        ],
+        [
+          2412.137451171875,
+          492.306396484375
+        ]
+      ],
+      "held_out": 25,
+      "translation": [
+        -839,
+        502
+      ],
+      "translation_error": {
+        "median_px": 19.016313139439088,
+        "p90_px": 245.27217335206862
+      },
+      "affine_matrix": [
+        [
+          1.2303133658902121,
+          -0.1703711564285278,
+          -1073.888942067341
+        ],
+        [
+          0.006914052438991721,
+          1.3418297328064532,
+          421.29374657356857
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "affine_error": {
+        "median_px": 1.1496568728614194,
+        "p90_px": 7.076999651469601
+      },
+      "sphere_error": {
+        "median_px": 93.64441150134307,
+        "p90_px": 166.7637048876783
+      },
+      "sphere_rotation": [
+        [
+          0.9994744722858047,
+          -0.026246723866456583,
+          -0.01902337339407915
+        ],
+        [
+          0.026491932527746904,
+          0.9995676563890055,
+          0.012754521235075719
+        ],
+        [
+          0.018680384363227085,
+          -0.013251784305091066,
+          0.9997376823211044
+        ]
+      ],
+      "sphere-focal-width_error": {
+        "median_px": 106.36841199917397,
+        "p90_px": 177.288788803702
+      },
+      "sphere-focal-width_rotation": [
+        [
+          0.9600657911898227,
+          0.015550157239887504,
+          -0.27934185006345463
+        ],
+        [
+          0.04289881698728977,
+          0.9784648223991269,
+          0.20190661908053847
+        ],
+        [
+          0.2764658533854585,
+          -0.20582707289678198,
+          0.9387235205184713
+        ]
+      ]
+    }
+  ],
+  "outputs": {
+    "flat": {
+      "size": [
+        3724,
+        2373
+      ],
+      "covered_pixels": 6266713,
+      "origin": [
+        -1165,
+        -432
+      ]
+    },
+    "affine": {
+      "size": [
+        3879,
+        2646
+      ],
+      "covered_pixels": 7309238,
+      "origin": [
+        -1320,
+        -276
+      ]
+    },
+    "sphere": {
+      "size": [
+        3740,
+        2545
+      ],
+      "covered_pixels": 6280928,
+      "origin": [
+        -2461,
+        63044
+      ]
+    },
+    "sphere-focal-width": {
+      "size": [
+        3506,
+        2375
+      ],
+      "covered_pixels": 5692020,
+      "origin": [
+        -2320,
+        2871
+      ]
+    }
+  },
+  "method": "SIFT ratio 0.7; homography RANSAC 8px prefilter; every third accepted match held out; focal chosen by mean of per-pair training median errors.",
+  "limits": "Metrics describe a dominant plane after prefilter, not all objects. Sphere assumes shared focal length, centred principal point and pure rotation. No calibration or depth recovery. Conservative masks may leave followers outside the central region.",
+  "sphere_focal_px": 40944.0,
+  "sphere_grid_boundary": true,
+  "focal_search": [
+    {
+      "focal_px": 1279.5,
+      "mean_pair_training_median_px": 89.10765285075841
+    },
+    {
+      "focal_px": 1412.6825327456431,
+      "mean_pair_training_median_px": 81.81014651656467
+    },
+    {
+      "focal_px": 1559.7279705546262,
+      "mean_pair_training_median_px": 75.24327432325357
+    },
+    {
+      "focal_px": 1722.0792964730997,
+      "mean_pair_training_median_px": 70.2540740211651
+    },
+    {
+      "focal_px": 1901.3296929507255,
+      "mean_pair_training_median_px": 66.76599838267506
+    },
+    {
+      "focal_px": 2099.2381760235457,
+      "mean_pair_training_median_px": 64.05251816682365
+    },
+    {
+      "focal_px": 2317.7468568513373,
+      "mean_pair_training_median_px": 61.73349130042477
+    },
+    {
+      "focal_px": 2559.0000000000005,
+      "mean_pair_training_median_px": 59.086919383337516
+    },
+    {
+      "focal_px": 2825.3650654912863,
+      "mean_pair_training_median_px": 57.347946018004066
+    },
+    {
+      "focal_px": 3119.4559411092523,
+      "mean_pair_training_median_px": 55.95424874340708
+    },
+    {
+      "focal_px": 3444.1585929461994,
+      "mean_pair_training_median_px": 54.804589735504145
+    },
+    {
+      "focal_px": 3802.6593859014515,
+      "mean_pair_training_median_px": 53.74691938173075
+    },
+    {
+      "focal_px": 4198.4763520470915,
+      "mean_pair_training_median_px": 53.0531116398187
+    },
+    {
+      "focal_px": 4635.4937137026745,
+      "mean_pair_training_median_px": 52.51931590643537
+    },
+    {
+      "focal_px": 5118.000000000001,
+      "mean_pair_training_median_px": 52.04706563681388
+    },
+    {
+      "focal_px": 5650.7301309825725,
+      "mean_pair_training_median_px": 51.63466336277458
+    },
+    {
+      "focal_px": 6238.911882218506,
+      "mean_pair_training_median_px": 51.191856132340824
+    },
+    {
+      "focal_px": 6888.317185892399,
+      "mean_pair_training_median_px": 50.8466580188745
+    },
+    {
+      "focal_px": 7605.318771802902,
+      "mean_pair_training_median_px": 50.616799888438365
+    },
+    {
+      "focal_px": 8396.952704094185,
+      "mean_pair_training_median_px": 50.443746309109535
+    },
+    {
+      "focal_px": 9270.98742740535,
+      "mean_pair_training_median_px": 50.28894687756003
+    },
+    {
+      "focal_px": 10236.000000000002,
+      "mean_pair_training_median_px": 50.13982223887002
+    },
+    {
+      "focal_px": 11301.460261965145,
+      "mean_pair_training_median_px": 50.02024924771261
+    },
+    {
+      "focal_px": 12477.823764437013,
+      "mean_pair_training_median_px": 49.9468335090386
+    },
+    {
+      "focal_px": 13776.6343717848,
+      "mean_pair_training_median_px": 49.8862249535597
+    },
+    {
+      "focal_px": 15210.637543605804,
+      "mean_pair_training_median_px": 49.82865157967894
+    },
+    {
+      "focal_px": 16793.905408188366,
+      "mean_pair_training_median_px": 49.783033355856126
+    },
+    {
+      "focal_px": 18541.974854810695,
+      "mean_pair_training_median_px": 49.74929588647961
+    },
+    {
+      "focal_px": 20472.000000000007,
+      "mean_pair_training_median_px": 49.721608975804585
+    },
+    {
+      "focal_px": 22602.920523930294,
+      "mean_pair_training_median_px": 49.698889102069984
+    },
+    {
+      "focal_px": 24955.64752887403,
+      "mean_pair_training_median_px": 49.68024625576354
+    },
+    {
+      "focal_px": 27553.2687435696,
+      "mean_pair_training_median_px": 49.66494954997217
+    },
+    {
+      "focal_px": 30421.275087211612,
+      "mean_pair_training_median_px": 49.65239888631712
+    },
+    {
+      "focal_px": 33587.81081637673,
+      "mean_pair_training_median_px": 49.642101628564234
+    },
+    {
+      "focal_px": 37083.949709621396,
+      "mean_pair_training_median_px": 49.633653411113144
+    },
+    {
+      "focal_px": 40944.0,
+      "mean_pair_training_median_px": 49.626722357893016
+    }
+  ]
+}

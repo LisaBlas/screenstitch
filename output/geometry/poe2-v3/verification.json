@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "flat_pixels_verified_exact": 6266713,
+  "outputs_checked": [
+    "flat",
+    "affine",
+    "sphere",
+    "sphere-focal-width"
+  ],
+  "scope": "Input hashes, output sizes, alpha/owner/coverage consistency and exact flat-source pixels; not scene geometry or mask completeness."
+}
