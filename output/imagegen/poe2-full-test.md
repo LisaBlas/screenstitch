@@ -1,6 +1,11 @@
 # Full hideout test — 2026-10-26
 
-Status: generated, visually reviewed by agent, awaiting user review. Fidelity check does not pass.
+Status: rejected by user on 2026-10-26. Fidelity check does not pass.
+
+User review: the result looks like an AI recreation, loses detail, blurs NPC
+faces and brightens the original colour scheme. The next experiment uses
+source pixels with masks and geometric alignment; see
+[experiment instructions](../../experiments/README.md).
 
 ## Result
 
@@ -32,4 +37,4 @@ Source numbers refer to the manifest's ordered `original_inputs`. These groups c
 
 Follow the run order and exact arguments in `poe2-full-test.json`, resolving paths against the repository root. Inspect each input before each call. Prompts also exist as adjacent `.prompt.txt` files. Preserve all existing versions and save reruns under new names. The direct 16-image prompt is retained only as the rejected attempt, not as an executable successful recipe.
 
-The next fidelity experiment should correct one local defect at a time, starting with the missing canopy corridor. These outputs demonstrate coverage and tool limits; they do not establish a reliable full-hideout reconstruction method.
+These outputs demonstrate coverage and tool limits; they do not establish a reliable full-hideout reconstruction method. The earlier suggestion to correct generated defects locally is superseded by the user's request to try source-pixel stitching.

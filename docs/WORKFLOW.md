@@ -1,5 +1,11 @@
 # Screenshot compositing workflow
 
+Historical image-generation workflow. On 2026-10-26 the user rejected the
+full-hideout results for lost detail, blurred NPC faces and brighter colours.
+The current experiment uses source pixels, masks and geometric alignment; see
+[experiments/README.md](../experiments/README.md). Its execution is pending
+dependency-install approval. No new projection has been validated.
+
 ## Proven example
 
 The user accepted `output/imagegen/poe2-hideout-v1.png`. Its JSON manifest preserves the exact tool arguments and input order. This proves a useful visual result for this pair, not reliable accuracy across all games or camera angles.

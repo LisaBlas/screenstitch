@@ -12,4 +12,6 @@
 
 ## 2026-10-26
 
+- Recorded the user's rejection of the full-hideout image-generation results. Prepared a source-pixel flat/sphere comparison with conservative UI/player masks, transparent missing areas, source maps and geometry metrics. Syntax check passed; execution and visual review are pending approval to install pinned OpenCV/NumPy dependencies. See `experiments/README.md`.
+
 - Tested all 16 full-hideout screenshots through four overlapping generated sections, a merge and a revision. Saved all six images, exact prompts, ordered inputs, checksums, actual output dimensions and visual review. Recorded the five-image tool limit and remaining omissions/geometry drift; the full result is awaiting user review, not accepted. Updated source-set references after the upstream replacement of the earlier two screenshots.

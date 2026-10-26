@@ -1,0 +1,11 @@
+{
+  "description": "Conservative normalized rectangles for the current PoE2 screenshots. 0 = excluded. These masks include some valid scenery; inspect mask previews before accepting a composite.",
+  "rectangles": {
+    "top_left_icon": [0.0, 0.0, 0.065, 0.085],
+    "minimap": [0.845, 0.0, 1.0, 0.285],
+    "left_hud": [0.0, 0.785, 0.285, 1.0],
+    "right_hud_and_watermark": [0.70, 0.785, 1.0, 1.0],
+    "bottom_bar": [0.0, 0.975, 1.0, 1.0],
+    "player_and_followers": [0.34, 0.30, 0.66, 0.75]
+  }
+}
